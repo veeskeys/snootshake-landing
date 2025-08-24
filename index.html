@@ -3,82 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnootShakes</title>
+<title>SnootShake</title>
 <style>
-    /* General Reset */
-    * {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9; /* neutral background */
+        color: #333;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        font-family: 'Helvetica Neue', sans-serif;
-    }
-
-    body {
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    /* Header */
-    header {
         text-align: center;
+    }
+
+    header {
         padding: 40px 20px;
     }
 
     header img {
         max-width: 120px;
-        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 20px auto;
     }
 
     header h1 {
-        font-size: 2.2rem;
-        font-weight: 700;
+        font-size: 2rem;
         margin-bottom: 10px;
+        color: #004466; /* primary color matching logo */
     }
 
     header p {
-        font-size: 1.1rem;
-        color: #666;
+        font-size: 1rem;
+        color: #555;
     }
 
-    /* Main Section */
-    main {
+    .features {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
         padding: 40px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
     }
 
-    /* Feature Box */
     .feature {
         background-color: #fff;
-        border-radius: 16px;
-        padding: 30px 20px;
-        width: 100%;
-        max-width: 500px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        position: relative;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .feature::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 20px;
-        width: 50px;
-        height: 4px;
-        background-color: #00aaff; /* Subtle accent color */
-        border-radius: 2px;
+        border-radius: 12px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
     }
 
     .feature:hover {
@@ -86,18 +57,17 @@
     }
 
     .feature h3 {
-        margin-bottom: 15px;
-        font-size: 1.4rem;
-        color: #222;
+        color: #004466; /* matching logo color */
+        margin-bottom: 10px;
     }
 
     .feature p {
         color: #555;
+        font-size: 0.95rem;
     }
 
-    /* CTA Button */
     .cta-button {
-        background-color: #00aaff;
+        background-color: #00aaff; /* CTA button color */
         color: #fff;
         padding: 14px 28px;
         font-size: 1.1rem;
@@ -105,6 +75,8 @@
         border: none;
         border-radius: 10px;
         cursor: pointer;
+        margin: 30px auto;
+        display: inline-block;
         transition: background 0.3s ease, transform 0.2s ease;
     }
 
@@ -113,30 +85,22 @@
         transform: translateY(-2px);
     }
 
-    /* Footer */
     footer {
-        text-align: center;
         padding: 20px;
         font-size: 0.9rem;
         color: #999;
-    }
-
-    @media (max-width: 768px) {
-        main {
-            padding: 20px 10px;
-        }
     }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="assets/logo.png" alt="SnootShakes Logo">
-    <h1>SnootShakes</h1>
+    <img src="finalogo.png" alt="SnootShake Logo">
+    <h1>SnootShake</h1>
     <p>Reduce stress for dog parents by tracking and monitoring canine epilepsy.</p>
 </header>
 
-<main>
+<section class="features">
     <div class="feature">
         <h3>Track Seizures Easily</h3>
         <p>Log seizure events with time, severity, and medication details, keeping your vet informed effortlessly.</p>
@@ -151,14 +115,15 @@
         <h3>Share Reports with Vet</h3>
         <p>Generate concise, professional reports to ensure your vet gets accurate and complete information.</p>
     </div>
+</section>
 
-    <button class="cta-button">Get Started</button>
-</main>
+<button class="cta-button">Get Started</button>
 
 <footer>
-    &copy; 2025 SnootShakes. All rights reserved.
+    &copy; 2025 SnootShake. All rights reserved.
 </footer>
 
 </body>
 </html>
+
 
