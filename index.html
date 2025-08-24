@@ -18,16 +18,23 @@
   }
   h1 { 
     font-size: 2rem; 
-    color: #0077cc; /* Updated bright blue from logo */ 
+    color: #0077cc; /* Bright blue from logo */ 
     margin: 0.5rem 0;
   }
   p { 
     font-size: 1.2rem; 
     margin: 1rem 0; 
   }
+  .cta-container {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start; /* top-align button and list */
+    gap: 2rem; /* space between button and list */
+    margin: 2rem 0;
+    flex-wrap: wrap; /* stack on smaller screens */
+  }
   .cta-button { 
     display: inline-block; 
-    margin: 1.5rem 0; 
     padding: 1rem 2rem; 
     background-color: #ffcc00; /* Bright yellow from logo */ 
     color: #333; 
@@ -43,7 +50,7 @@
   .features { 
     text-align: left; 
     display: inline-block; 
-    margin-top: 2rem; 
+    margin: 0; /* top margin handled by container */
   }
   .features li { 
     margin: 0.5rem 0; 
@@ -54,37 +61,52 @@
     font-size: 0.9rem; 
     color: #555; 
   }
-  footer a { 
-    color: #0077cc; 
+  footer a {
+    color: #0077cc;
     text-decoration: none; 
+    display: inline-flex; 
+    align-items: center;
   }
-  footer a:hover { 
-    text-decoration: underline; 
+  footer a:hover svg {
+    fill: #005999; /* darken icon on hover */
+  }
+  footer svg {
+    width: 20px;
+    height: 20px;
+    fill: #0077cc;
   }
 </style>
 </head>
 <body>
 
-<img src="finalogo.png" alt="SnootShake Logo" class="logo">
+<img src="backgroundlogo.png" alt="SnootShake Logo" class="logo">
 
 <h1>🐾💛 Join the SnootShake Waitlist (It’s Free!)</h1>
-<p>Get early access and exclusive tips for managing your dog’s epilepsy.</p>
+<p>Get early access to this canine epilepsy tracker and exclusive tips for managing your dog’s seizures.</p>
 
-<a class="cta-button" href="https://forms.gle/pHifEXKp2zqK723T7" target="_blank">Join the Waitlist 📝</a>
+<div class="cta-container">
+  <a class="cta-button" href="https://forms.gle/pHifEXKp2zqK723T7" target="_blank">Join the Waitlist 📝</a>
 
-<ul class="features">
-  <li>✅ Log seizures in real time ⏱️</li>
-  <li>✅ Track medications 💊</li>
-  <li>✅ Share reports with your vet 📄</li>
-</ul>
+  <ul class="features">
+    <li>✅ Log seizures in real time ⏱️</li>
+    <li>✅ Track medications 💊</li>
+    <li>✅ Share reports with your vet 📄</li>
+  </ul>
+</div>
 
 <footer>
   We respect your privacy. Your info will only be used for SnootShake updates.<br>
-  Follow us: <a href="https://www.facebook.com/SnootShake" target="_blank">Facebook</a>
+  Follow us: 
+  <a href="https://www.facebook.com/SnootShake" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.414c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116c.728 0 1.324-.597 1.324-1.334V1.333C24 .597 23.403 0 22.675 0z"/>
+    </svg>
+  </a>
 </footer>
 
 </body>
 </html>
+
 
 
 
